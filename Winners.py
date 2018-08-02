@@ -6,7 +6,7 @@ def nameDraw(player, list_name):
     return player.name + names
 
 def winnerPlayer(list_player):
-    score = 0
+    score = -1
     match = 0
     num = 0
     for player in list_player:
