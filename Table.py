@@ -1,11 +1,12 @@
 from Player import GamePlayer
+
 class Middle(GamePlayer):
     def draw(self, deck):
         self.card_in_play.append(deck.drawCard())
         return self
 
-    @property
-    def show(self):
+    # @property
+    def showTable(self):
         for card in self.card_in_play:
             card.show()
 

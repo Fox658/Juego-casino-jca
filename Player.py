@@ -1,6 +1,7 @@
 class GamePlayer(object):
     def __init__(self):
         self.card_in_play = []
+
 class Player(GamePlayer):
     def __init__(self, name, *args, **kwargs):
         self.name = name
@@ -10,14 +11,13 @@ class Player(GamePlayer):
     def draw(self, deck):
         self.card_in_play.append(deck.drawCard())
         return self
-    @property
-    def show(self):
+
+    def showHand(self):
         for card in self.card_in_play:
             card.show()
+
     def descard(self, card):
         return self.card_in_play.remove(card)
-    def combo(self, middle):
-        pass
 
     def match(self, middle):
         count = 1

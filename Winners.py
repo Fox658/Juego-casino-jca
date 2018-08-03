@@ -33,9 +33,9 @@ def roundPlay(player_list, middle, deck):
         for player in player_list:
             player.match(middle)
             print player.name
-            player.show
-            print "Table"
-            middle.show
+            player.showHand()
+            print "Table: "
+            middle.showTable()
         for player_check in player_list:
             n = 0
             while n <= 1:
@@ -45,4 +45,3 @@ def roundPlay(player_list, middle, deck):
                     for card in middle.card_in_play:
                         player_check.pile.append(card)
                 n += 1
-
